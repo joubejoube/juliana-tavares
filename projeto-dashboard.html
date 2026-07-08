@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard de Analytics Educacional · Juliana Tavares</title>
+<meta name="description" content="Case: plataforma full-stack de analytics educacional com IA, construída por Juliana Tavares.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="marca" href="index.html">Juliana Tavares<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="projetos.html" aria-current="page">Projetos</a></li>
+      <li><a href="index.html#sobre">Sobre</a></li>
+      <li><a href="index.html#contato">Contato</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero hero-curto">
+  <div class="wrap">
+    <p class="eyebrow">Case · Plataforma · IA · Dados</p>
+    <h1 class="titulo-pagina">Dashboard de Analytics Educacional</h1>
+    <p class="hero-sub">Uma plataforma full-stack construída do zero pra transformar dados espalhados em decisões estratégicas, acompanhando mais de 700 estudantes em tempo real.</p>
+
+    <div class="case-meta">
+      <div><strong>Meu papel</strong>Concepção, desenvolvimento e manutenção (ponta a ponta)</div>
+      <div><strong>Contexto</strong>Ismart (Fundação Telles), 2026</div>
+      <div><strong>Stack</strong>JavaScript, API Anthropic (Claude), Vercel, GitHub, Monday.com, Google Sheets</div>
+    </div>
+  </div>
+</header>
+
+<div class="case-corpo">
+  <div class="wrap">
+
+    <div class="case-secao">
+      <h2>O problema</h2>
+      <p>Um programa educacional com mais de 700 estudantes distribuídos em 4 cidades gera muitos dados: presença, entregas, avaliações, satisfação, observações de campo. Só que esses dados viviam espalhados em planilhas, quadros de gestão e formulários, sem visão consolidada.</p>
+      <p>Na prática, isso significava que <strong>cada decisão estratégica dependia de horas de consolidação manual</strong>, e a diretoria enxergava o programa com semanas de atraso.</p>
+    </div>
+
+    <div class="case-secao">
+      <h2>A solução</h2>
+      <p>Construí uma plataforma própria de analytics que conecta todas as fontes de dados do programa e apresenta os indicadores em tempo real, com painéis pensados pra cada público: visão estratégica pra diretoria e visão operacional pros times regionais.</p>
+      <ul>
+        <li><strong>Integração de múltiplas fontes:</strong> Monday.com e Google Sheets consolidados via proxy serverless, sem depender de exportação manual;</li>
+        <li><strong>IA embarcada:</strong> integração com a API da Anthropic (Claude) pra análises qualitativas a partir de respostas abertas;</li>
+        <li><strong>Deploy contínuo:</strong> hospedagem no GitHub com publicação automática na Vercel, permitindo evolução constante da ferramenta;</li>
+        <li><strong>Monitoramento de satisfação:</strong> acompanhamento por ciclo da percepção dos estudantes, com taxa de resposta e recortes por cidade.</li>
+      </ul>
+
+      <div class="galeria">
+        <div class="foto">
+          <!-- Troque por: <img src="fotos/dashboard-visao-geral.png" alt="Visão geral do dashboard"> -->
+          print · visão geral
+        </div>
+        <div class="foto">
+          <!-- Troque por: <img src="fotos/dashboard-painel.png" alt="Painel estratégico"> -->
+          print · painel estratégico
+        </div>
+      </div>
+      <p class="legenda">Dica: um GIF curto navegando pela plataforma impressiona mais que print parado. Dados de estudantes sempre anonimizados.</p>
+    </div>
+
+    <div class="case-secao">
+      <h2>Como construí</h2>
+      <p>Comecei pelo diagnóstico com quem usava os dados no dia a dia, mapeando quais perguntas precisavam de resposta rápida. A primeira versão nasceu como protótipo num hackathon interno e evoluiu de forma iterativa: cada ciclo de uso gerava ajustes de indicadores, novos painéis e melhorias de experiência.</p>
+      <p>Todo o desenvolvimento foi feito com <strong>IA como ferramenta de trabalho</strong>, do código à documentação, o que me permitiu entregar uma plataforma completa sem time de tecnologia dedicado.</p>
+    </div>
+
+    <div class="case-secao">
+      <h2>Resultados</h2>
+      <div class="resultados">
+        <div class="resultado"><strong>700+</strong><span>estudantes acompanhados em tempo real</span></div>
+        <div class="resultado"><strong>4 cidades</strong><span>com indicadores consolidados num só lugar</span></div>
+        <div class="resultado"><strong>4,05/5</strong><span>satisfação dos estudantes monitorada por ciclo</span></div>
+        <div class="resultado"><strong>0 planilhas</strong><span>de consolidação manual pra diretoria decidir</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="proximo">
+  <a href="projeto-personal-prof.html">
+    <span class="rotulo">Próximo case</span>
+    <span class="nome">Personal Prof</span>
+  </a>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Juliana Tavares</span>
+    <span>Feito à mão, com IA como ferramenta.</span>
+  </div>
+</footer>
+
+</body>
+</html>
