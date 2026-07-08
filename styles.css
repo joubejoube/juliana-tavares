@@ -97,16 +97,16 @@ a.projeto{text-decoration:none}
   background:var(--card);
   border:1px solid var(--linha);
   border-radius:4px;
-  padding:34px 32px 30px;
+  padding:26px 26px 24px;
   display:flex;flex-direction:column;
   transition:transform .18s ease, box-shadow .18s ease;
 }
 .projeto:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(45,58,31,.10)}
-.projeto-tag{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;color:var(--vinho);margin-bottom:14px}
-.projeto h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.45rem;line-height:1.25;margin-bottom:14px}
-.projeto p{font-size:.94rem;color:var(--musgo-medio);flex-grow:1}
+.projeto-tag{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;color:var(--vinho);margin-bottom:10px}
+.projeto h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.3rem;line-height:1.25;margin-bottom:10px}
+.projeto p{font-size:.9rem;color:var(--musgo-medio);flex-grow:1}
 .projeto-foto{
-  margin:22px -32px;
+  margin:18px -26px;
   background:var(--creme-escuro);
   border-top:1px solid var(--linha);
   border-bottom:1px solid var(--linha);
@@ -124,7 +124,7 @@ a.projeto{text-decoration:none}
   background:var(--creme);
 }
 .ver-case{
-  margin-top:20px;font-size:.82rem;font-weight:500;letter-spacing:.06em;
+  margin-top:16px;font-size:.82rem;font-weight:500;letter-spacing:.06em;
   text-transform:uppercase;color:var(--vinho);
 }
 .ver-case::after{content:" →"}
@@ -236,3 +236,11 @@ a.projeto{text-decoration:none}
 
 footer{padding:34px 0;font-size:.78rem;color:var(--musgo-medio)}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+/* ---------- FOTO SOBRE ---------- */
+.sobre-foto{
+  width:100%;max-width:320px;
+  border-radius:4px;border:1px solid var(--linha);
+  margin-bottom:28px;display:block;
+  filter:grayscale(0%);
+}
