@@ -245,3 +245,6 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
   margin:0 auto 32px;display:block;
   box-shadow:0 10px 30px rgba(45,58,31,.10);
 }
+
+/* ---------- FOTOS EM RETRATO ---------- */
+.foto-retrato{aspect-ratio:4/5}
