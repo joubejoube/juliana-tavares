@@ -158,7 +158,7 @@ a.projeto{text-decoration:none}
 .case-secao ul{max-width:68ch;color:var(--musgo-medio);padding-left:22px;margin-bottom:16px}
 .case-secao li{margin-bottom:8px}
 
-.galeria{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:28px 0 8px}
+.galeria{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:36px 0 14px;max-width:640px}
 @media(max-width:700px){.galeria{grid-template-columns:1fr}}
 .galeria-cheia{grid-template-columns:1fr}
 .foto{
@@ -170,7 +170,7 @@ a.projeto{text-decoration:none}
   overflow:hidden;
 }
 .foto img{width:100%;height:100%;object-fit:cover;display:block}
-.legenda{font-size:.8rem;color:var(--musgo-medio);margin-top:-2px;margin-bottom:24px}
+.legenda{font-size:.8rem;color:var(--musgo-medio);margin-top:0;margin-bottom:28px;max-width:640px}
 
 .resultados{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;margin-top:28px}
 .resultado{
