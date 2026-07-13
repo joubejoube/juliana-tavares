@@ -22,7 +22,7 @@
 
         var alvo = parseInt(partes[1], 10);
         var sufixo = partes[2];
-        var duracao = 1200;
+        var duracao = 2400;
         var inicio = null;
 
         function passo(agora) {
