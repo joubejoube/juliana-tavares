@@ -42,8 +42,20 @@ nav{
 @media(max-width:640px){.nav-links{gap:16px}.nav-links a{font-size:.72rem}}
 
 /* ---------- HERO ---------- */
-header.hero{padding:110px 0 90px}
-header.hero-curto{padding:80px 0 60px}
+/* Luz da manhã: radiais suaves de verde (canto sup. direito) e vinho (esquerda) */
+header.hero{
+  padding:110px 0 90px;
+  background:
+    radial-gradient(900px 600px at 85% -10%, rgba(74,88,56,.14), transparent 60%),
+    radial-gradient(700px 500px at -10% 40%, rgba(129,11,56,.05), transparent 55%),
+    linear-gradient(180deg, #F7F4EB 0%, var(--creme) 100%);
+}
+header.hero-curto{
+  padding:80px 0 60px;
+  background:
+    radial-gradient(700px 400px at 85% -20%, rgba(74,88,56,.12), transparent 60%),
+    linear-gradient(180deg, #F7F4EB 0%, var(--creme) 100%);
+}
 .eyebrow{
   display:inline-flex;align-items:center;gap:10px;
   font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:400;
@@ -66,16 +78,20 @@ h1.titulo-pagina{font-size:clamp(2rem,5vw,3.4rem)}
   display:inline-block;text-decoration:none;
   font-size:.85rem;font-weight:500;letter-spacing:.05em;
   padding:14px 28px;border-radius:2px;
-  transition:transform .18s ease, background .18s ease;
+  transition:transform .18s ease, background .18s ease, filter .18s ease;
 }
 .botao:hover{transform:translateY(-2px)}
-.botao-cheio{background:var(--musgo);color:var(--creme)}
-.botao-cheio:hover{background:#38471f}
+/* Degradê musgo → verde médio no botão principal */
+.botao-cheio{background:linear-gradient(135deg, var(--musgo) 0%, var(--musgo-medio) 100%);color:var(--creme)}
+.botao-cheio:hover{filter:brightness(1.12)}
 .botao-borda{border:1px solid var(--musgo);color:var(--musgo)}
 .botao-borda:hover{background:var(--creme-escuro)}
 
 /* ---------- FAIXA ---------- */
-.faixa{background:var(--musgo);color:var(--creme);padding:20px 0;overflow:hidden}
+.faixa{
+  background:linear-gradient(150deg, #232E17 0%, var(--musgo) 60%, #3B4A2B 100%);
+  color:var(--creme);padding:20px 0;overflow:hidden;
+}
 .faixa-itens{display:flex;flex-wrap:wrap;justify-content:space-between;max-width:1060px;margin:0 auto;padding:0 24px}
 .faixa-item{padding:8px 18px 8px 0;font-size:.85rem;letter-spacing:.03em}
 .faixa-item strong{font-family:'Fraunces',serif;font-weight:600;font-size:1.35rem;display:block;letter-spacing:0}
@@ -94,7 +110,7 @@ section{padding:90px 0}
 @media(max-width:800px){.projetos{grid-template-columns:1fr}}
 a.projeto{text-decoration:none}
 .projeto{
-  background:var(--card);
+  background:linear-gradient(160deg, #FBF9F2 0%, #F1EDDF 100%);
   border:1px solid var(--linha);
   border-radius:4px;
   padding:26px 26px 24px;
@@ -182,7 +198,8 @@ a.projeto{text-decoration:none}
 
 .resultados{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;margin-top:28px}
 .resultado{
-  background:var(--card);border:1px solid var(--linha);border-radius:4px;
+  background:linear-gradient(160deg, #FBF9F2 0%, #F1EDDF 100%);
+  border:1px solid var(--linha);border-radius:4px;
   padding:24px;
 }
 .resultado strong{
@@ -208,7 +225,13 @@ a.projeto{text-decoration:none}
 .proximo .nome::after{content:" →";color:var(--vinho)}
 
 /* ---------- SOBRE / CONTATO / FOOTER ---------- */
-.ciclo{background:var(--creme-escuro);border-top:1px solid var(--linha);border-bottom:1px solid var(--linha)}
+/* Luz suave de verde no canto sup. esquerdo do ciclo */
+.ciclo{
+  background:
+    radial-gradient(800px 500px at 10% 0%, rgba(74,88,56,.10), transparent 60%),
+    var(--creme-escuro);
+  border-top:1px solid var(--linha);border-bottom:1px solid var(--linha);
+}
 .ciclo-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:36px}
 @media(max-width:800px){.ciclo-grid{grid-template-columns:1fr}}
 .ciclo-item h3{
@@ -233,12 +256,18 @@ a.projeto{text-decoration:none}
 .sobre-lista li span:last-child{color:var(--musgo-medio);text-align:right}
 .sobre-lista a{color:var(--vinho);text-decoration-thickness:1px;text-underline-offset:3px}
 
-.contato{background:var(--musgo);color:var(--creme)}
+/* Brilho de vinho subindo do rodapé */
+.contato{
+  background:
+    radial-gradient(800px 400px at 50% 115%, rgba(129,11,56,.14), transparent 60%),
+    var(--musgo);
+  color:var(--creme);
+}
 .contato .sec-titulo{color:var(--creme)}
 .contato .sec-sub{color:#C9CDB8;margin-bottom:36px}
 .contato-links{display:flex;gap:18px;flex-wrap:wrap}
 .contato .botao-cheio{background:var(--creme);color:var(--musgo)}
-.contato .botao-cheio:hover{background:#fff}
+.contato .botao-cheio:hover{background:#fff;filter:none}
 .contato .botao-borda{border-color:#8A9377;color:var(--creme)}
 .contato .botao-borda:hover{background:rgba(244,241,232,.08)}
 
@@ -274,6 +303,40 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 .reveal.visivel{opacity:1;transform:none}
 .barra-leitura{
   position:fixed;top:0;left:0;height:3px;width:0;
-  background:var(--vinho);z-index:99;
+  background:linear-gradient(90deg, var(--musgo), var(--vinho));z-index:99;
   transition:width .1s linear;
 }
+
+/* ---------- DEPOIMENTOS ---------- */
+.depoimentos-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+@media(max-width:800px){.depoimentos-grid{grid-template-columns:1fr}}
+.depo{
+  background:var(--card);border:1px solid var(--linha);border-radius:4px;
+  padding:30px 30px 26px;display:flex;flex-direction:column;
+}
+.depo blockquote{
+  font-size:.95rem;color:var(--musgo-medio);flex-grow:1;
+  border:none;margin:0 0 20px;
+}
+.depo blockquote::before{
+  content:"\201C";display:block;
+  font-family:'Fraunces',serif;font-size:2.6rem;line-height:.6;
+  color:var(--vinho);margin-bottom:12px;
+}
+.depo-autor{font-size:.88rem;font-weight:500}
+.depo-cargo{font-size:.78rem;color:var(--musgo-medio)}
+
+/* ---------- TRAJETÓRIA ---------- */
+.trajetoria{list-style:none;border-left:2px solid var(--linha);margin-left:8px;padding-left:0}
+.trajetoria li{position:relative;padding:0 0 34px 32px}
+.trajetoria li:last-child{padding-bottom:4px}
+.trajetoria li::before{
+  content:"";position:absolute;left:-7px;top:6px;
+  width:12px;height:12px;border-radius:50%;
+  background:var(--creme);border:3px solid var(--vinho);
+}
+.trajetoria .ano{
+  font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;display:block;
+}
+.trajetoria .fato{font-size:.92rem;color:var(--musgo-medio)}
+.botao-cv{margin-top:10px}
