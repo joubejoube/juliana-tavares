@@ -268,3 +268,12 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
   margin:28px 0 14px;
 }
 .video-case video{width:100%;display:block}
+
+/* ---------- EFEITOS (script.js) ---------- */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease, transform .7s ease}
+.reveal.visivel{opacity:1;transform:none}
+.barra-leitura{
+  position:fixed;top:0;left:0;height:3px;width:0;
+  background:var(--vinho);z-index:99;
+  transition:width .1s linear;
+}
