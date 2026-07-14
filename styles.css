@@ -55,36 +55,45 @@ header.hero::before{
   content:"";position:absolute;pointer-events:none;
   width:1200px;height:900px;right:-15%;top:-35%;
   background:radial-gradient(closest-side, rgba(129,11,56,.13), rgba(129,11,56,.05) 45%, transparent 70%);
-  animation:flutua-bordo 9s ease-in-out infinite alternate;
+  animation:orbita-bordo 12s linear infinite;
 }
 header.hero::after{
   content:"";position:absolute;pointer-events:none;
   width:900px;height:750px;left:-12%;top:15%;
   background:radial-gradient(closest-side, rgba(163,77,110,.11), transparent 65%);
-  animation:flutua-rose 13s ease-in-out infinite alternate;
+  animation:orbita-rose 16s linear infinite;
 }
 header.hero .wrap{position:relative;z-index:1}
 header.hero .wrap::before{
   content:"";position:absolute;pointer-events:none;z-index:-1;
   width:700px;height:600px;left:-38%;bottom:-45%;
   background:radial-gradient(closest-side, rgba(129,11,56,.09), transparent 68%);
-  animation:flutua-bordo-baixo 16s ease-in-out infinite alternate;
+  animation:orbita-baixo 20s linear infinite;
 }
-@keyframes flutua-bordo-baixo{
-  from{transform:translate(0,0) scale(1)}
-  to{transform:translate(130px,-70px) scale(1.15)}
+@keyframes orbita-baixo{
+  0%{transform:translate(0,0) scale(1)}
+  25%{transform:translate(220px,-100px) scale(1.1)}
+  50%{transform:translate(360px,60px) scale(1.15)}
+  75%{transform:translate(140px,120px) scale(1.06)}
+  100%{transform:translate(0,0) scale(1)}
 }
 @keyframes respira-fundo{
   from{background-position:0% 0%}
   to{background-position:100% 100%}
 }
-@keyframes flutua-bordo{
-  from{transform:translate(0,0) scale(1)}
-  to{transform:translate(-160px,110px) scale(1.18)}
+@keyframes orbita-bordo{
+  0%{transform:translate(0,0) scale(1)}
+  25%{transform:translate(-320px,140px) scale(1.12)}
+  50%{transform:translate(-500px,-20px) scale(1.18)}
+  75%{transform:translate(-200px,-140px) scale(1.08)}
+  100%{transform:translate(0,0) scale(1)}
 }
-@keyframes flutua-rose{
-  from{transform:translate(0,0) scale(1)}
-  to{transform:translate(140px,-90px) scale(1.12)}
+@keyframes orbita-rose{
+  0%{transform:translate(0,0) scale(1)}
+  25%{transform:translate(260px,-120px) scale(1.08)}
+  50%{transform:translate(420px,40px) scale(1.14)}
+  75%{transform:translate(180px,150px) scale(1.05)}
+  100%{transform:translate(0,0) scale(1)}
 }
 .eyebrow{
   display:inline-flex;align-items:center;gap:10px;
