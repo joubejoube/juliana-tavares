@@ -55,20 +55,33 @@ header.hero::before{
   content:"";position:absolute;pointer-events:none;
   width:1200px;height:900px;right:-15%;top:-35%;
   background:radial-gradient(closest-side, rgba(129,11,56,.13), rgba(129,11,56,.05) 45%, transparent 70%);
-  animation:orbita-bordo 17s linear infinite;
+  animation:orbita-bordo 40s linear infinite;
 }
 header.hero::after{
   content:"";position:absolute;pointer-events:none;
   width:900px;height:750px;left:-12%;top:15%;
   background:radial-gradient(closest-side, rgba(163,77,110,.11), transparent 65%);
-  animation:orbita-rose 22s linear infinite;
+  animation:orbita-rose 50s linear infinite;
 }
 header.hero .wrap{position:relative;z-index:1}
 header.hero .wrap::before{
   content:"";position:absolute;pointer-events:none;z-index:-1;
   width:700px;height:600px;left:-38%;bottom:-45%;
   background:radial-gradient(closest-side, rgba(129,11,56,.09), transparent 68%);
-  animation:orbita-baixo 27s linear infinite;
+  animation:orbita-baixo 60s linear infinite;
+}
+header.hero .wrap::after{
+  content:"";position:absolute;pointer-events:none;z-index:-1;
+  width:380px;height:340px;left:-16%;top:-30%;
+  background:radial-gradient(closest-side, rgba(129,11,56,.10), transparent 65%);
+  animation:orbita-pequena 45s linear infinite;
+}
+@keyframes orbita-pequena{
+  0%{transform:translate(0,0) scale(1)}
+  25%{transform:translate(120px,70px) scale(1.1)}
+  50%{transform:translate(200px,-10px) scale(1.16)}
+  75%{transform:translate(80px,-80px) scale(1.05)}
+  100%{transform:translate(0,0) scale(1)}
 }
 @keyframes orbita-baixo{
   0%{transform:translate(0,0) scale(1)}
