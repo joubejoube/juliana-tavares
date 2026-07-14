@@ -45,16 +45,30 @@ nav{
 /* Luz da manhã: radiais suaves de verde (canto sup. direito) e vinho (esquerda) */
 header.hero{
   padding:110px 0 90px;
-  background:
-    radial-gradient(900px 600px at 85% -10%, rgba(74,88,56,.14), transparent 60%),
-    radial-gradient(700px 500px at -10% 40%, rgba(129,11,56,.05), transparent 55%),
-    linear-gradient(180deg, #F7F4EB 0%, var(--creme) 100%);
+  background:linear-gradient(180deg, #F7F4EB 0%, var(--creme) 100%);
+  position:relative;overflow:hidden;
 }
-header.hero-curto{
-  padding:80px 0 60px;
-  background:
-    radial-gradient(700px 400px at 85% -20%, rgba(74,88,56,.12), transparent 60%),
-    linear-gradient(180deg, #F7F4EB 0%, var(--creme) 100%);
+header.hero-curto{padding:80px 0 60px}
+header.hero::before{
+  content:"";position:absolute;pointer-events:none;
+  width:1100px;height:800px;right:-20%;top:-40%;
+  background:radial-gradient(closest-side, rgba(74,88,56,.16), transparent 70%);
+  animation:flutua-verde 26s ease-in-out infinite alternate;
+}
+header.hero::after{
+  content:"";position:absolute;pointer-events:none;
+  width:900px;height:700px;left:-30%;top:10%;
+  background:radial-gradient(closest-side, rgba(129,11,56,.07), transparent 65%);
+  animation:flutua-vinho 34s ease-in-out infinite alternate;
+}
+header.hero .wrap{position:relative;z-index:1}
+@keyframes flutua-verde{
+  from{transform:translate(0,0) scale(1)}
+  to{transform:translate(-90px,60px) scale(1.12)}
+}
+@keyframes flutua-vinho{
+  from{transform:translate(0,0) scale(1)}
+  to{transform:translate(80px,-50px) scale(1.08)}
 }
 .eyebrow{
   display:inline-flex;align-items:center;gap:10px;
@@ -89,8 +103,14 @@ h1.titulo-pagina{font-size:clamp(2rem,5vw,3.4rem)}
 
 /* ---------- FAIXA ---------- */
 .faixa{
-  background:linear-gradient(150deg, #232E17 0%, var(--musgo) 60%, #3B4A2B 100%);
+  background:linear-gradient(120deg, #232E17 0%, var(--musgo) 40%, #3B4A2B 70%, var(--musgo) 100%);
+  background-size:220% 100%;
+  animation:desliza-faixa 22s ease-in-out infinite alternate;
   color:var(--creme);padding:20px 0;overflow:hidden;
+}
+@keyframes desliza-faixa{
+  from{background-position:0% 50%}
+  to{background-position:100% 50%}
 }
 .faixa-itens{display:flex;flex-wrap:wrap;justify-content:space-between;max-width:1060px;margin:0 auto;padding:0 24px}
 .faixa-item{padding:8px 18px 8px 0;font-size:.85rem;letter-spacing:.03em}
