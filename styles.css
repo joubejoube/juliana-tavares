@@ -59,11 +59,21 @@ header.hero::before{
 }
 header.hero::after{
   content:"";position:absolute;pointer-events:none;
-  width:900px;height:750px;left:-25%;top:25%;
-  background:radial-gradient(closest-side, rgba(163,77,110,.10), transparent 65%);
+  width:900px;height:750px;left:-12%;top:15%;
+  background:radial-gradient(closest-side, rgba(163,77,110,.11), transparent 65%);
   animation:flutua-rose 19s ease-in-out infinite alternate;
 }
 header.hero .wrap{position:relative;z-index:1}
+header.hero .wrap::before{
+  content:"";position:absolute;pointer-events:none;z-index:-1;
+  width:700px;height:600px;left:-38%;bottom:-45%;
+  background:radial-gradient(closest-side, rgba(129,11,56,.09), transparent 68%);
+  animation:flutua-bordo-baixo 23s ease-in-out infinite alternate;
+}
+@keyframes flutua-bordo-baixo{
+  from{transform:translate(0,0) scale(1)}
+  to{transform:translate(130px,-70px) scale(1.15)}
+}
 @keyframes respira-fundo{
   from{background-position:0% 0%}
   to{background-position:100% 100%}
