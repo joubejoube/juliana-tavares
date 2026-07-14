@@ -45,30 +45,36 @@ nav{
 /* Luz da manhã: radiais suaves de verde (canto sup. direito) e vinho (esquerda) */
 header.hero{
   padding:110px 0 90px;
-  background:linear-gradient(180deg, #F7F4EB 0%, var(--creme) 100%);
+  background:linear-gradient(160deg, #F8F2EC 0%, var(--creme) 45%, #F3EDE4 100%);
+  background-size:180% 180%;
+  animation:respira-fundo 18s ease-in-out infinite alternate;
   position:relative;overflow:hidden;
 }
 header.hero-curto{padding:80px 0 60px}
 header.hero::before{
   content:"";position:absolute;pointer-events:none;
-  width:1100px;height:800px;right:-20%;top:-40%;
-  background:radial-gradient(closest-side, rgba(74,88,56,.16), transparent 70%);
-  animation:flutua-verde 26s ease-in-out infinite alternate;
+  width:1200px;height:900px;right:-15%;top:-35%;
+  background:radial-gradient(closest-side, rgba(129,11,56,.13), rgba(129,11,56,.05) 45%, transparent 70%);
+  animation:flutua-bordo 14s ease-in-out infinite alternate;
 }
 header.hero::after{
   content:"";position:absolute;pointer-events:none;
-  width:900px;height:700px;left:-30%;top:10%;
-  background:radial-gradient(closest-side, rgba(129,11,56,.07), transparent 65%);
-  animation:flutua-vinho 34s ease-in-out infinite alternate;
+  width:900px;height:750px;left:-25%;top:25%;
+  background:radial-gradient(closest-side, rgba(163,77,110,.10), transparent 65%);
+  animation:flutua-rose 19s ease-in-out infinite alternate;
 }
 header.hero .wrap{position:relative;z-index:1}
-@keyframes flutua-verde{
-  from{transform:translate(0,0) scale(1)}
-  to{transform:translate(-90px,60px) scale(1.12)}
+@keyframes respira-fundo{
+  from{background-position:0% 0%}
+  to{background-position:100% 100%}
 }
-@keyframes flutua-vinho{
+@keyframes flutua-bordo{
   from{transform:translate(0,0) scale(1)}
-  to{transform:translate(80px,-50px) scale(1.08)}
+  to{transform:translate(-160px,110px) scale(1.18)}
+}
+@keyframes flutua-rose{
+  from{transform:translate(0,0) scale(1)}
+  to{transform:translate(140px,-90px) scale(1.12)}
 }
 .eyebrow{
   display:inline-flex;align-items:center;gap:10px;
