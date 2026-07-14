@@ -270,10 +270,14 @@ a.projeto{text-decoration:none}
 .sobre-texto p strong{color:var(--musgo);font-weight:500}
 .sobre-lista{list-style:none;border-top:1px solid var(--linha)}
 .sobre-lista li{
-  padding:16px 0;border-bottom:1px solid var(--linha);
-  font-size:.9rem;display:flex;justify-content:space-between;gap:16px;
+  padding:14px 0;border-bottom:1px solid var(--linha);
+  font-size:.9rem;
 }
-.sobre-lista li span:last-child{color:var(--musgo-medio);text-align:right}
+.sobre-lista li span:first-child{
+  display:block;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--vinho);font-weight:500;margin-bottom:4px;
+}
+.sobre-lista li span:last-child{display:block;color:var(--musgo-medio)}
 .sobre-lista a{color:var(--vinho);text-decoration-thickness:1px;text-underline-offset:3px}
 
 /* Brilho de vinho subindo do rodapé */
